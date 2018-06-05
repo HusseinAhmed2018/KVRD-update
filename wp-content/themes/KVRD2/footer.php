@@ -3,7 +3,7 @@
         <div class="myContainer d-lg-flex align-items-center justify-content-between">
             <div class="footerElem clearfix">
                 <a href="">
-                    <img src="images/logo.png" alt="" class="float-left logo">
+                    <img src="<?= get_template_directory_uri().'/asset/images/logo.png';?>" alt="" class="float-left logo">
                 </a>
             </div>
             <div class="footerElem ">
@@ -21,12 +21,15 @@
             <div class="d-inline-block footerElem ">
                 <p class="f-18 font-weight-bold white">FOR NEWSLETTER</p>
                 <div class="smallHr mt-3 mb-2"></div>
+
                 <form action="" class="position-relative">
-                    <input type="text" placeholder="your email" class="letter-4 border-0">
-                    <button class="position-absolute border-0 ">
+                    <input id="news_email" type="text" placeholder="your email" class="letter-4 border-0">
+                    <button id="idForm" class="position-absolute border-0 ">
                         <i class="fas fa-arrow-right white"></i>
                     </button>
                 </form>
+
+
             </div>
         </div>
     </div>
@@ -50,5 +53,49 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript">
+    $(function() {
+
+        $('#idForm').click(function (e) {
+            e.preventDefault();
+            var email = $( "#news_email" ).val();
+
+            $.ajax({
+                type: 'POST',
+                dataType: "json",
+                url: ajaxurl,
+                cache: false,
+                data: {"action": "news_letter", email: email },
+                success: function(data) {
+
+                    // console.log(data[0].error);
+                    error   = data[0].error;
+                    success = data[0].success;
+                    console.log(data[0].error);
+
+                    if(data[0].error != ''){
+                        $( ".wrongEmail" ).html( '<i class="fas fa-times"></i> ' + error );
+                        // $('.wrongEmail').css('display', 'block');
+
+                        $(".wrongEmail").fadeTo(20000, 50000).slideUp(50000, function(){
+                            $(".wrongEmail").slideUp(50000);
+                        });
+                    }else{
+                        // console.log(data[0].success);
+                        $('.wrongEmail').css('display', 'none');
+                        $(".alert-success").fadeTo(20000, 50000).slideUp(50000, function(){
+                            $(".alert-success").slideUp(50000);
+                        });
+                        $( ".alert" ).html( '<strong>Success!</strong> ' + success );
+
+                    }
+
+                }
+            });
+        });
+
+
+    });
+</script>
 </body>
 </html>

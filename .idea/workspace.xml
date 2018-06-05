@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9b111c7-364e-4afc-b4ee-8fbdf159c244" name="Default" comment="" />
+    <list default="true" id="a9b111c7-364e-4afc-b4ee-8fbdf159c244" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/KVRD2/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/KVRD2/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/KVRD2/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/KVRD2/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/KVRD2/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/KVRD2/header.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="single.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="single.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD2/single.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
@@ -29,32 +33,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD2/functions.php">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD2/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="69" selection-start-line="69" selection-end-line="79" selection-end-column="1" />
+            <state relative-caret-position="639">
+              <caret line="85" column="75" selection-start-line="85" selection-start-column="75" selection-end-line="85" selection-end-column="75" />
               <folding>
-                <element signature="n#WPDocs_Walker_Nav_Menu#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#footer#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/single.php">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD2/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="78" selection-end-column="26" />
+            <state relative-caret-position="744">
+              <caret line="122" selection-start-line="122" selection-end-line="122" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/last/kvrd/wp-content/themes/KVRD/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="135" column="30" lean-forward="true" selection-start-line="135" selection-start-column="30" selection-end-line="135" selection-end-column="30" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="front-page.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/front-page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page-careers.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/page-careers.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="309" selection-start-line="309" selection-end-line="314" selection-end-column="56" />
+              <folding>
+                <element signature="n#news_letter_function#0;n#!!top" />
+                <element signature="n#message_function#0;n#!!top" />
+                <element signature="n#property_function#0;n#!!top" />
+                <element signature="n#WPDocs_Walker_Nav_Menu#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,8 +113,10 @@
       <find>con</find>
       <find>logo</find>
       <find>googleMap</find>
-      <find>$lg_img</find>
       <find>map</find>
+      <find>requ</find>
+      <find>form</find>
+      <find>$lg_img</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -87,7 +126,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/wp-config.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/KVRD/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/KVRD/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/KVRD/header.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/fz3temp-2/page-projects.php" />
@@ -107,13 +145,15 @@
         <option value="$PROJECT_DIR$/wp-content/themes/KVRD2/front-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/KVRD2/asset/carrers.html" />
         <option value="$PROJECT_DIR$/wp-content/themes/KVRD2/asset/css/style.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/KVRD2/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/KVRD2/searchform.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/KVRD2/asset/ourProjects.html" />
         <option value="$PROJECT_DIR$/wp-content/themes/KVRD2/page-projects.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/KVRD2/asset/projectPage.html" />
-        <option value="$PROJECT_DIR$/wp-content/themes/KVRD2/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/KVRD2/single.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/KVRD/footer.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/KVRD2/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/KVRD2/header.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/KVRD2/footer.php" />
       </list>
     </option>
   </component>
@@ -132,7 +172,7 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="639" />
     <option name="y" value="105" />
     <option name="width" value="1022" />
@@ -162,13 +202,6 @@
               <item name="KVRD" type="462c0819:PsiDirectoryNode" />
               <item name="wp-content" type="462c0819:PsiDirectoryNode" />
               <item name="themes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KVRD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KVRD" type="462c0819:PsiDirectoryNode" />
-              <item name="wp-content" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
-              <item name="KVRD" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KVRD" type="b2602c69:ProjectViewProjectNode" />
@@ -212,12 +245,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525246048517</updated>
       <workItem from="1525246053083" duration="20371000" />
-      <workItem from="1528188015890" duration="13904000" />
+      <workItem from="1528188015890" duration="16457000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34275000" />
+    <option name="totallyTimeSpent" value="36828000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -229,7 +262,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32943678" />
@@ -291,13 +324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="153" column="7" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/template.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/page-contact-us.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-2/functions.php" />
@@ -328,13 +354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/front-page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -387,13 +406,6 @@
           <folding>
             <element signature="n#div#0;n#div#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -466,34 +478,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD2/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/single.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="78" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="69" selection-start-line="69" selection-end-line="79" selection-end-column="1" />
-          <folding>
-            <element signature="n#WPDocs_Walker_Nav_Menu#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD2/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -506,6 +494,81 @@
             <element signature="e#1415#2017#0#HTML" />
             <element signature="e#2353#2373#0#HTML" expanded="true" />
             <element signature="e#2956#3831#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="309" selection-start-line="309" selection-end-line="314" selection-end-column="56" />
+          <folding>
+            <element signature="n#news_letter_function#0;n#!!top" />
+            <element signature="n#message_function#0;n#!!top" />
+            <element signature="n#property_function#0;n#!!top" />
+            <element signature="n#WPDocs_Walker_Nav_Menu#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD2/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="137" column="56" selection-start-line="137" selection-start-column="56" selection-end-line="137" selection-end-column="56" />
+          <folding>
+            <element signature="n#news_letter_function#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="123" column="28" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/front-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD/page-careers.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD2/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/last/kvrd/wp-content/themes/KVRD/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="135" column="30" lean-forward="true" selection-start-line="135" selection-start-column="30" selection-end-line="135" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/KVRD2/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="85" column="75" selection-start-line="85" selection-start-column="75" selection-end-line="85" selection-end-column="75" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#footer#0;n#!!top" />
           </folding>
         </state>
       </provider>
