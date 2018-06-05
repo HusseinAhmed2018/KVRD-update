@@ -1,0 +1,305 @@
+@font-face {
+  font-family: 'aperturaRegular';
+  src: url("../fonts/Apertura-Regular/Apertura-Regular.eot") format("embedded-opentype"),
+  url("../fonts/Apertura-Regular/Apertura-Regular.svg") format("svg"),
+  url("../fonts/Apertura-Regular/Apertura-Regular.ttf") format("truetype"),
+  url("../fonts/Apertura-Regular/Apertura-Regular.woff") format("woff")
+}
+
+@font-face {
+  font-family: 'aperturaMedium';
+  src: url("../fonts/Apertura-Medium/Apertura-Medium.eot") format("embedded-opentype"),
+  url("../fonts/Apertura-Medium/Apertura-Medium.svg") format("svg"),
+  url("../fonts/Apertura-Medium/Apertura-Medium.ttf") format("truetype"),
+  url("../fonts/Apertura-Medium/Apertura-Medium.woff") format("woff")
+}
+@font-face {
+  font-family: 'aperturaBold';
+  src: url("../fonts/Apertura-Bold/Apertura-Bold.eot") format("embedded-opentype"),
+  url("../fonts/Apertura-Bold/Apertura-Bold.svg") format("svg"),
+  url("../fonts/Apertura-Bold/Apertura-Bold.ttf") format("truetype"),
+  url("../fonts/Apertura-Bold/Apertura-Bold.woff") format("woff")
+}
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: url("../fonts/MyriadPro-Regular/MyriadPro-Regular.eot") format("embedded-opentype"),
+  url("../fonts/MyriadPro-Regular/MyriadPro-Regular.svg") format("svg"),
+  url("../fonts/MyriadPro-Regular/MyriadPro-Regular.ttf") format("truetype"),
+  url("../fonts/MyriadPro-Regular/MyriadPro-Regular.woff") format("woff")
+}
+body{
+  font-family: 'aperturaRegular';
+}
+.aperturaMedium{
+  font-family: 'aperturaMedium';
+}
+.aperturaBold{
+  font-family: 'aperturaBold';
+}
+.MyriadPro-Regular{
+  font-family: 'MyriadPro-Regular';
+}
+.f-11{
+  font-size: 11px;
+}
+.f-13{
+  font-size: 13px;
+}
+.f-30{
+  font-size: 30px;
+}
+.f-28{
+  font-size: 28px;
+}
+.f-22{
+  font-size: 22px;
+}
+.f-18{
+  font-size: 18px;
+}
+input, button{
+  background-color: transparent;
+  border: none;
+}
+.mainColor{
+  color: #173b49;
+}
+.white{
+  color: #fff;
+}
+
+.fixedDiv{
+  position: fixed;
+  top: 322px;
+  right: 10px;
+  z-index: 999;
+  a{
+    margin-bottom: 10px;
+  }
+  i{
+    padding: 5px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    font-size: 20px;
+  }
+}
+
+.img-centered {
+  text-align: center;
+  overflow: hidden;
+  img {
+    margin: 0 -100%;
+    min-width: 100%;
+  }
+}
+
+.play {
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
+  i {
+    font-size: 70px;
+  }
+}
+
+.lightColor {
+  color: #296880;
+}
+$mainColor: #173b49;
+
+header {
+  width: 100%;
+  z-index: 999;
+  .logo {
+    padding-top: 20px;
+    padding-right: 25px;
+  }
+  .content {
+    width: 100%;
+    display: none;
+    hr {
+      border-top: 2px solid #c4c7cb;
+      margin-right: -5.5%;
+    }
+  }
+  .topBar {
+    padding: 20px 0;
+    .menu {
+      margin-left: auto;
+      li {
+        display: inline;
+        position: relative;
+        padding: 20px 0;
+        font-size: 11px;
+        .mydropDown {
+          position: absolute;
+          top: 50px;
+          left: -25px;
+          opacity: 0.9;
+          background-color: #4e5158;
+          width: 150px;
+          display: none;
+          i{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+          }
+          a {
+            font-size: 9px;
+            color: #fff;
+            padding: 5px 10px;
+            display: block;
+          }
+          &.head {
+
+            a{
+              color: $mainColor;
+              padding: 10px 20px 5px;
+            }
+          }
+        }
+        &:hover {
+          .mydropDown {
+            display: block
+          }
+        }
+      }
+    }
+    a {
+      color: #91908f;
+      padding: 0 13px;
+      &:hover, &.active {
+        color: #fff;
+      }
+    }
+    form {
+      margin-left: auto;
+      height: 22px;
+      input {
+        height: 22px;
+        border: 2px solid #91908f;
+        border-radius: 15px;
+        color: #fff;
+      }
+      button {
+        top: 0;
+        right: 0;
+        i {
+          color: #fff;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .up {
+    background-color: #151616;
+    padding-top: 80px;
+    .content {
+      margin-top: 25px;
+      li {
+        font-family: 'MyriadPro-Regular';
+        font-size: 12px;
+        a {
+          display: inline-block;
+          margin-bottom: 25px;
+          border-bottom: 2px solid #252626;
+        }
+      }
+      input {
+        border: 1px solid #fff;
+        height: 30px;
+        color: #fff;
+        width: 210px;
+      }
+      button {
+        border-left: 2px solid #464646;
+        height: 28px;
+        color: #fff;
+        padding: 0 8px;
+        font-size: 8px;
+        position: absolute;
+        right: 0;
+        top: 1px;
+        i {
+          font-size: 11px;
+          padding-left: 3px;
+
+        }
+      }
+      .wrongEmail{
+        top: 0;
+        left: 2px;
+        color: red;
+        font-size: 7px;
+        i{
+          padding: 1px;
+          background-color: red;
+          color: #000;
+          border-radius: 100%;
+          font-size: 5px;
+        }
+      }
+    }
+    .socialIcons {
+      margin: 5px 0;
+      a {
+        color: #242424;
+        border: 1px solid #2a2a2a;
+        &:hover{
+          color: #fff;
+        }
+      }
+    }
+  }
+  .down {
+    background-color: #000;
+    line-height: 38px;
+    .downContent {
+      margin-right: 40px;
+      .smallLogo {
+        img {
+          width: 33px;
+          height: 33px;
+        }
+      }
+      span {
+        font-size: 8px;
+      }
+    }
+    .drag {
+      width: 30px;
+      height: 30px;
+      background-color: #151616;
+      border-radius: 100%;
+      top: -15px;
+      right: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) {
+  footer{
+    .up{
+      .logo{
+        float: left;
+      }
+      .content{
+        margin: 0 0 0 60px;
+      }
+    }
+    .down{
+      .downContent{
+        margin-right: 112px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 769px) {
+  header {
+    .content {
+      display: block;
+    }
+  }
+}

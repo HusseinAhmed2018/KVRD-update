@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+</head>
+<body>
+<header>
+    <div class="top">
+        <div class="myContainer clearfix">
+            <a href="">
+                <img src="images/logo.png" alt="" class="float-left logo">
+            </a>
+            <div class="float-right mt-3">
+
+                <div class="socialIcons mr-4 toHide">
+                    <a href="#" class="">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="active">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </div>
+                <form action="" class="position-relative searchForm">
+                    <input type="text" placeholder="Search">
+                    <button class="position-absolute">
+                        <i class="fas fa-search mainColor"></i>
+                    </button>
+                </form>
+                <a href="javascript:void(0)" class="mainColor mainHover searchIcon toHide">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="bottom">
+        <div class="myContainer clearfix position-relative">
+            <a href="javascript:(void(0))" class="float-left navIcon">
+                <i class="fas fa-bars mainColor f-18"></i>
+            </a>
+            <ul class="float-left d-in-large">
+                <li class="text-uppercase d-inline-block">
+                    <a href="#">
+                        kvrd
+                    </a>
+                </li>
+                <li class="text-uppercase d-inline-block active">
+                    <a href="#">
+                        OUR PROJECTS
+                    </a>
+                </li>
+                <li class="text-uppercase d-inline-block">
+                    <a href="#">
+                        PROPERTY INQUIRIES
+                    </a>
+                </li>
+                <li class="text-uppercase d-inline-block">
+                    <a href="#">
+                        Media MEDIA CENTER
+                    </a>
+                </li>
+                <li class="text-uppercase d-inline-block">
+                    <a href="#">
+                        CAREERS
+                    </a>
+                </li>
+                <li class="text-uppercase d-inline-block">
+                    <a href="#">
+                        CONTACT US
+                    </a>
+                </li>
+            </ul>
+            <div class="chat mainColorBg float-right d-flex justify-content-center align-items-center position-absolute">
+                <a href="">
+                    <i class="fas fa-comment mr-1"></i>
+                    LIVE CHAT
+                </a>
+            </div>
+        </div>
+    </div>
+
+</header>
+<div class="responsiveMenu whiteBg position-fixed">
+    <div class="top clearfix px-4 borderBottom d-flex align-items-center">
+        <a href="" class="float-left">
+            <img src="images/logo.png" alt="" class="logo">
+        </a>
+        <form action="" class="position-relative searchForm float-right ml-auto">
+            <input type="text" placeholder="Search">
+            <button class="position-absolute">
+                <i class="fas fa-search mainColor"></i>
+            </button>
+        </form>
+        <div class="float-right toHide ml-auto">
+            <div class="socialIcons d-inline-block">
+                <a href="#" class="">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="active">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </div>
+            <span class="mainColor f-20 mr-2">|</span>
+            <a href="javascript:void(0)" class="mainColor mainHover searchIcon">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </div>
+    <div class="px-4 clearfix borderBottom">
+        <a href="javascript:void(0)" class="f-20 mainColor d-inline-block mainHover closeSubMenu">
+            <i class="fas fa-times"></i>
+        </a>
+        <div class="chat mainColorBg float-right d-flex justify-content-center align-items-center">
+            <a href="">
+                <i class="fas fa-comment mr-1"></i>
+                LIVE CHAT
+            </a>
+        </div>
+    </div>
+    <div class="px-4">
+        <ul>
+            <li>
+                <a href="" class="mainHover">KVRD</a>
+            </li>
+            <li>
+                <a href="" class="mainHover">OUR PROJECTS</a>
+            </li>
+            <li>
+                <a href="" class="mainHover">PROPERTY INQUIRIES</a>
+            </li>
+            <li>
+                <a href="" class="mainHover">Media MEDIA CENTER</a>
+            </li>
+            <li>
+                <a href="" class="mainHover">CAREERS</a>
+            </li>
+            <li>
+                <a href="" class="mainHover">CONTACT US</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<section class="home-1 position-relative">
+    <video muted autoplay class="myVideo" id="myVideo">
+        <source src="images/valentine.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <img src="images/video.png" alt="" class="forVideo">
+    <div class="position-absolute play">
+        <a href="#" id="myBtn">
+            <i class="fas fa-play-circle"></i>
+        </a>
+    </div>
+</section>
+<section class="mrg-top-xg mrg-btm-xg allWords">
+    <div class="myContainer position-relative common-slider-btn">
+        <div class="swiper-container home-first-slider ">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="imgWrapper">
+                        <img src="images/knwoledge.png" alt="">
+                    </div>
+                    <div class="emptyDiv">
+                        <div class="absoluteDiv">
+                            <p class="mainColor aperturaRegular singlechar">K</p>
+                            <div class="mainColorBg around-Words">
+                                <p class="head white letter-4 text-uppercase">KNOWLEDGE</p>
+                                <div class="smallHr"></div>
+                                <p class="white desc letter-4">
+                                    Knowledge lies at the forefront of all our operations, serving as the key foundation
+                                    on
+                                    which we develop exceptional research-based strategies that help identify
+                                    pressing market needs to build unparalleled quality projects with competitive
+                                    prices, and
+                                    unmatched value exceeding customers’ every expectation. It also arms us to stay
+                                    ahead of
+                                    competition by constantly making well-informed decisions at all times.
+                                </p>
+                                <button class="mainColor f-xmd border-0 letter-4 p-3 whiteBg">
+                                    READ MORE
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgWrapper">
+                        <img src="images/vision.jpg" alt="">
+                    </div>
+                    <div class="emptyDiv">
+                        <div class="absoluteDiv">
+                            <p class="mainColor aperturaRegular singlechar">V</p>
+                            <div class="mainColorBg around-Words">
+                                <p class="head white letter-4 text-uppercase">vision</p>
+                                <div class="smallHr"></div>
+                                <p class="white desc letter-4">
+                                    Our vision is not just a “picture-perfect” dream of what could be, but rather a
+                                    sound planned reality driven by in-depth research that guides us every step of the
+                                    way to create iconic projects where communities can experience the best of
+                                    integrated living, while we relentlessly work with passion to own a leading market
+                                    position.
+                                </p>
+                                <button class="mainColor f-xmd border-0 letter-4 p-3 whiteBg">
+                                    READ MORE
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgWrapper">
+                        <img src="images/thirdSlider.jpg" alt="">
+                    </div>
+                    <div class="emptyDiv">
+                        <div class="absoluteDiv">
+                            <p class="mainColor aperturaRegular singlechar">R</p>
+                            <div class="mainColorBg around-Words">
+                                <p class="head white letter-4 text-uppercase">Research</p>
+                                <div class="smallHr"></div>
+                                <p class="white desc letter-4">
+                                    Research is our vital tool in developing groundbreaking solutions and future-focused
+                                    projects that meet Egypt’s ever-changing needs. It supports us to transform our
+                                    vision into an impressive investment reality based on a strategic plan that sets our
+                                    well-crafted communities apart from competition.
+                                </p>
+                                <button class="mainColor f-xmd border-0 letter-4 p-3 whiteBg">
+                                    READ MORE
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="imgWrapper">
+                        <img src="images/secondSlider.jpg" alt="">
+                    </div>
+                    <div class="emptyDiv">
+                        <div class="absoluteDiv">
+                            <p class="mainColor aperturaRegular singlechar">D</p>
+                            <div class="mainColorBg around-Words">
+                                <p class="head white letter-4 text-uppercase">Development</p>
+                                <div class="smallHr"></div>
+                                <p class="white desc letter-4">
+                                    We are constantly searching for innovative strategies to grow our business through
+                                    key partnerships that meet Egypt’s growing demand on quality housing, as wel l as
+                                    commercial and retail spaces, boasting a solid track record of delivering unique
+                                    communities that empower integrated living in Egypt while emerging as a strong real
+                                    estate developer synonymous with credibility and trust.
+                                </p>
+                                <button class="mainColor f-xmd border-0 letter-4 p-3 whiteBg">
+                                    READ MORE
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev allWordsbtn f-18 mainColor letter-4">PREVIOUS</div>
+        <div class="position-absolute f-18 sep lightGray">/</div>
+        <div class="swiper-button-next allWordsbtn f-18 mainColor letter-4">NEXT</div>
+    </div>
+</section>
+<section class="home-unique d-flex position-relative">
+    <div class="grayBg align-self-center">
+        <div class="myContainer">
+            <div class="uniqueWrapper">
+                <p class="text-uppercase f-lg mainColor">WHAT MAKES
+                    US UNIQUE?</p>
+                <div class="smallHr mainColorBg d-none d-md-block"></div>
+                <div class="toChangePos">
+                    <p class="f-md mainColor twoLines">Our core strength lies in KVRD’s Research Foundation that
+                        works around the clock to seize every
+                        opportunity to develop beJer integrated communities through practical research, on-going educational
+                        programs and outreach activities that aim at supporting each of our real estate developments by
+                        transforming them into comprehensive hubs that exceed the demands of our clients, today and in the
+                        future. KVRD’s expert team of professionals help prospect investors get their strategy right, not
+                        only
+                        ensuring they make the best choices that best suit their investment needs, but also guarantee
+                        remarkable
+                        outcomes at all times</p>
+                    <button class="mainColor f-18 border-0 letter-4 p-3 whiteBg">
+                        READ MORE
+                    </button>
+                </div>
+                <div class="uniqueImg centerImg-md">
+                    <img src="images/unique.png" alt="" >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mrg-hr-130 projectWrapper">
+    <div class="myContainer  common-slider-btn position-relative">
+        <div class="mrg-btm-xg">
+            <p class="mainColor f-lg text-uppercase">OUR</p>
+            <p class="mainColor f-lg text-uppercase">Projects</p>
+        </div>
+
+        <div class="flexConatiner projects-slider">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li><img src="images/projectSidewalk.png" alt=""></li>
+                    <li><img src="images/projectSidewalk.png" alt=""></li>
+                    <li><img src="images/projectSidewalk.png" alt=""></li>
+                    <li><img src="images/projectSidewalk.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-uppercase mainColor f-lg finalName">SIDEWALK</p>
+    </div>
+</section>
+<footer>
+    <div class="top ">
+        <div class="myContainer d-lg-flex align-items-center justify-content-between">
+            <div class="footerElem clearfix">
+                <a href="">
+                    <img src="images/logo.png" alt="" class="float-left logo">
+                </a>
+            </div>
+            <div class="footerElem ">
+                <p class="f-18 font-weight-bold white">OUR LOCATION</p>
+                <div class="smallHr mt-3 mb-2"></div>
+                <p class="f-12 white">KVRD. California
+                    34 Tesla, Ste 100
+                    Irvine, Ca, USA 9261</p>
+            </div>
+            <div class="footerElem ">
+                <p class="f-18 font-weight-bold white">Email Us</p>
+                <div class="smallHr mt-3 mb-2"></div>
+                <p class="f-12 white">kvrd@wearekvrd.com</p>
+            </div>
+            <div class="d-inline-block footerElem ">
+                <p class="f-18 font-weight-bold white">FOR NEWSLETTER</p>
+                <div class="smallHr mt-3 mb-2"></div>
+                <form action="" class="position-relative">
+                    <input type="text" placeholder="your email" class="letter-4 border-0">
+                    <button class="position-absolute border-0 ">
+                        <i class="fas fa-arrow-right white"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="bottom mainColorBg">
+        <div class="myContainer clearfix">
+            <span class="float-md-left d-block white f-12">© 2018 Envoy. All Rights Reserved.</span>
+            <div class="socialIcons float-md-right d-inline-block">
+                <a href="#" class="">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="active">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

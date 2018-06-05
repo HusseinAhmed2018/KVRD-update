@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'Apertura-Regular';
+  src: url('Apertura-Regular.eot?#iefix') format('embedded-opentype'),  url('Apertura-Regular.otf')  format('opentype'),
+	     url('Apertura-Regular.woff') format('woff'), url('Apertura-Regular.ttf')  format('truetype'), url('Apertura-Regular.svg#Apertura-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <?php wp_head(); ?>
+    <script type="text/javascript" src="<?= get_template_directory_uri().'/asset/js/jquery-3.3.1.min.js';?>"></script>
+    <script type="text/javascript" src="<?= get_template_directory_uri().'/asset/js/bootstrap.min.js';?>"></script>
+    <script type="text/javascript" src="<?= get_template_directory_uri().'/asset/js/swiper.min.js';?>"></script>
+    <script type="text/javascript" src="<?= get_template_directory_uri().'/asset/js/main.js';?>"></script>
+    <script type="text/javascript" src="<?= get_template_directory_uri().'/asset/js/jquery.flexslider-min.js';?>"></script>
+
+</head>
+<body>
+<header>
+    <?php
+
+    $facebook = get_post_meta(21,'facebook',true);
+    $instagram = get_post_meta(21,'instagram',true);
+    $twitter = get_post_meta(21,'twitter',true);
+    $Linkedin = get_post_meta(21,'linkedin',true);
+
+    ?>
+    <div class="top">
+        <div class="myContainer clearfix">
+            <a href="">
+                <img src="<?= get_template_directory_uri().'/asset/images/logo.png';?>" alt="" class="float-left logo">
+            </a>
+
+            <?php get_search_form(); ?>
+        </div>
+    </div>
+    <hr>
+    <div class="bottom">
+        <div class="myContainer clearfix position-relative">
+            <a href="javascript:(void(0))" class="float-left navIcon">
+                <i class="fas fa-bars mainColor f-18"></i>
+            </a>
+            <?php
+            $args = array(
+                'menu'  => 'main Menu',
+                'container' => 'ul',
+                'items_wrap' => '<ul class="float-left d-in-large">%3$s</ul>',
+
+            );
+            wp_nav_menu( $args );
+
+            ?>
+            <div class="chat mainColorBg float-right d-flex justify-content-center align-items-center position-absolute">
+                <a href="">
+                    <i class="fas fa-comment mr-1"></i>
+                    LIVE CHAT
+                </a>
+            </div>
+        </div>
+    </div>
+
+</header>
+<div class="responsiveMenu whiteBg position-fixed">
+    <div class="top clearfix px-4 borderBottom d-flex align-items-center">
+        <a href="" class="float-left">
+            <img src="<?= get_template_directory_uri().'/asset/images/logo.png';?>" alt="" class="logo">
+        </a>
+        <form action="" class="position-relative searchForm float-right ml-auto">
+            <input type="text" placeholder="Search">
+            <button class="position-absolute">
+                <i class="fas fa-search mainColor"></i>
+            </button>
+        </form>
+
+        <div class="float-right toHide ml-auto">
+            <div class="socialIcons d-inline-block">
+                <a href="#" class="">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="active">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </div>
+            <span class="mainColor f-20 mr-2">|</span>
+            <a href="javascript:void(0)" class="mainColor mainHover searchIcon">
+                <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </div>
+    <div class="px-4 clearfix borderBottom">
+        <a href="javascript:void(0)" class="f-20 mainColor d-inline-block mainHover closeSubMenu">
+            <i class="fas fa-times"></i>
+        </a>
+        <div class="chat mainColorBg float-right d-flex justify-content-center align-items-center">
+            <a href="">
+                <i class="fas fa-comment mr-1"></i>
+                LIVE CHAT
+            </a>
+        </div>
+    </div>
+    <div class="px-4">
+        <?php
+        $args = array(
+            'menu'  => 'side Menu',
+            'container' => 'ul',
+            'items_wrap' => '<ul >%3$s</ul>',
+
+        );
+        wp_nav_menu( $args );
+
+        ?>
+
+    </div>
+</div>
