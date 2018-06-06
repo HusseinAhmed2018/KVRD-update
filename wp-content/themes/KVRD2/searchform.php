@@ -7,7 +7,7 @@
         <a href="<?=$instagram?>" class="">
             <i class="fab fa-instagram"></i>
         </a>
-        <a href="<?=$twitter?>" class="active">
+        <a href="<?=$twitter?>" >
             <i class="fab fa-twitter"></i>
         </a>
         <a href="<?=$facebook?>" class="">

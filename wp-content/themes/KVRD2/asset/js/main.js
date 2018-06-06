@@ -34,6 +34,7 @@ $(window).ready(function () {
             prevEl: '.swiper-button-prev.allWordsbtn',
         },
     });
+    // project PAe sliders
     var designSlider = new Swiper('.design-slider', {
         slidesPerView: 1,
         navigation: {
@@ -53,15 +54,16 @@ $(window).ready(function () {
         observeParents: true,
     });
 
+    var x = 0;
+    // Our Projects
     $('.flexslider').flexslider({
         animation: "slide",
-        loop: false,
-        // start: function (slider) {
-        //     $('.flex-active-slide').next().click(function (event) {
-        //         event.preventDefault();
-        //         slider.flexAnimate(slider.getTarget("next"));
-        //     });
-        // }
+        slideshow: false,
+        after: function (slider) {
+            $('.flex-active-slide').next().click(function () {
+                slider.flexAnimate(slider.getTarget("next"));
+            });
+        }
     });
     $('.flex-next').prepend('<span class="mr-3 lightGray">/</span>');
 
@@ -90,12 +92,20 @@ $(window).ready(function () {
         parent.find('.searchForm').css('display', 'inline-block');
         parent.find('.toHide').css('display', 'none');
     });
-    $('.navIcon').click(function () {
-        $('.responsiveMenu').addClass('displayResponsive')
+    $('.navIcon .fa-bars').click(function () {
+        $('.responsiveMenu').addClass('displayResponsive');
+        $('.navIcon').addClass('displayClose');
+        $('.chat').css('position', 'relative');
+        $('.bottom').addClass('borderBottom')
     });
-    $('.closeSubMenu').click(function () {
-        $('.responsiveMenu').removeClass('displayResponsive')
+    //
+    $('.navIcon .closeSubMenu').click(function () {
+        $('.responsiveMenu').removeClass('displayResponsive');
+        $('.navIcon').removeClass('displayClose');
+        $('.chat').css('position', 'absolute');
     });
+
+
 
     function activateSlider(clickedIndex) {
         $('.gallery .gallerySlider[data-index=' + clickedIndex + "]").addClass('slider-opened');
@@ -105,10 +115,10 @@ $(window).ready(function () {
     $('.galleryData a').click(function (e) {
         $('.galleryData a i').remove();
         $('.galleryData a').removeClass('mainColor ');
-        $(this).prepend('<i class="fas fa-caret-right m-0"></i>');
+        $(this).prepend('<i class="fas fa-caret-right"></i>');
         $(this).addClass('mainColor ');
         var clickedIndex = $(this).attr('data-index');
-        var openedIndex = $('.gallery .slider-opened').attr('data-index')
+        var openedIndex = $('.gallery .slider-opened').attr('data-index');
         if (clickedIndex != openedIndex) {
             $('.gallery .slider-opened').removeClass('slider-opened');
             $('.gallery .common').css('display', 'none');

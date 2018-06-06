@@ -136,3 +136,60 @@ function add_ajaxurl_cdata_to_front(){ ?>
         //]]> </script>
 <?php }
 add_action( 'wp_head', 'add_ajaxurl_cdata_to_front', 1);
+
+#----------------------------------AJAX see more ------------------------------------
+function more_post_ajax(){
+
+    $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 3;
+    $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
+
+    header("Content-Type: text/html");
+
+    $args = array(
+        'suppress_filters' => true,
+        'post_type' => 'post',
+        'posts_per_page' => $ppp,
+        'post_type' => 'projects',
+        'paged'    => $page,
+        "order" => 'ASC',
+    );
+
+    $loop = new WP_Query($args);
+    $conut = $loop->post_count;
+    $x = 0;
+    $out = '';
+
+    if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
+        $id = get_the_ID();
+        $image = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'full')[0];
+        $logo = get_post_meta($id, 'logo')[0]['guid'];
+        $excerpt = get_post_meta($id, 'project_excerpt');
+        $url = get_post_permalink($id);
+
+        $out .= '<div class="singleProject clearfix position-relative mrg-btm-lg">
+                        <div class="col-md-9 image centerImg-md p-0">
+                            <img src="'.$image.'" alt="">
+                        </div>
+                        <div class="mainColorBg commonDiv float-right">
+                            <div class="projectLogo m-auto">
+                                <img src="'. $logo.'" alt="">
+                                <p class="aperturaRegular text-uppercase desc">
+                                    '.$excerpt[0].'
+                                </p>
+                                <a href="'.$url.'" class="aperturaRegular d-inline-block">MORE</a>
+                            </div>
+
+                        </div>
+                    </div>';
+
+    endwhile;
+    endif;
+    $t = true;
+    if($loop->max_num_pages - $page ==  0) $t = false;
+    wp_reset_postdata();
+//    wp_send_json(['t' => $t,'out' => $out]);
+    die(json_encode(['t' => $t,'out' => $out])) ;
+}
+
+add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
+add_action('wp_ajax_more_post_ajax', 'more_post_ajax');

@@ -39,6 +39,7 @@ img {
 
 .navIcon {
   display: block;
+  padding: 20px 0;
 }
 
 .d-in-large {
@@ -50,20 +51,27 @@ img {
     color: $mainColor;
   }
 }
-
+.closeSubMenu {
+  display: none;
+}
+.displayClose{
+  .fa-bars{
+    display: none;
+  }
+  .fa-times{
+    display: block;
+  }
+}
+.borderBottom {
+  border-bottom: 1px solid rgba(112, 112, 122, 0.1);
+}
 .responsiveMenu {
-  //transition: 1.2s;
-  top: 0;
+  transition: 1.2s;
+  top: 140px;
   left: -100%;
   width: 100%;
   height: 100%;
   z-index: 999;
-  .borderBottom {
-    border-bottom: 1px solid rgba(112, 112, 122, 0.1);
-  }
-  .closeSubMenu {
-    padding: 20px 0;
-  }
   .toHide {
     display: inline-block;
   }
@@ -88,17 +96,25 @@ img {
 
 .displayResponsive {
   left: 0;
+  transition: 1.2s;
+  z-index: 99;
   //transition: 1.2s;
 }
 
 header {
   background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
   .bottom {
-    line-height: 63px;
+    //line-height: 63px;
     ul {
       width: calc(100% - 250px);
     }
     li {
+      padding: 20px 0;
       &:not(:last-child) {
         margin-right: 25px;
       }
@@ -125,6 +141,7 @@ header {
 }
 
 .chat {
+  position: absolute;
   width: 177px;
   height: 70px;
   top: 0;
@@ -171,6 +188,7 @@ header {
 }
 
 .home-1 {
+  margin-top: 145px;
   .myVideo {
     display: none;
     width: 100%;
@@ -623,13 +641,13 @@ footer {
   .sep {
     top: 105%;
     margin-top: -22px;
-    left: 95px;
+    left: 112px;
   }
   .swiper-button-prev {
     left: 0;
   }
   .swiper-button-next {
-    left: 110px;
+    left: 128px;
   }
   .grayBg {
     top: 0;
@@ -1007,12 +1025,11 @@ footer {
       width: 40%;
     }
   }
-  .home-1 {
-    height: 100%;
-    .myVideo {
-      height: 100%;
-      position: absolute;
-      left: 0;
-    }
-  }
+  //.home-1 {
+  //  //height: 100%;
+  //  .myVideo {
+  //    //position: absolute;
+  //    left: 0;
+  //  }
+  //}
 }
