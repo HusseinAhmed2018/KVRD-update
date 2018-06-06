@@ -2,9 +2,11 @@
 
 <?php // Show the selected project content.
 if (have_posts()) :
-    while (have_posts()) : the_post();
-        $name = get_queried_object()->name;
-        ?>
+
+    $name = get_queried_object()->name;
+    $terms = get_terms('project-type');
+    $term_id = get_queried_object()->term_id;
+?>
         <section
                 style="background-image: url('<?= get_template_directory_uri() . '/asset/images/carrers.png'; ?>'); background-size: cover"
                 class="firstSection ourProject">
@@ -19,21 +21,33 @@ if (have_posts()) :
             <div class="myContainer">
                 <p class="text-center text-md-right mrg-btm-xg">
                     <?php
+                    $numItems = count($terms);
+                    $i = 0;
                     foreach ($terms as $term) {
+
                         ?>
-                        <a href="<?= esc_url(get_term_link($term));?>" class="aperturaMedium"><?=$term->name;?></a>
-                        <span class="sep">|</span>
+                        <a href="<?= esc_url(get_term_link($term));?>" class="aperturaMedium <?=(($term_id == $term->term_id)? 'active':'')?>"><?=$term->name;?></a>
                         <?php
+                        if(++$i != $numItems) {
+                        ?>
+                        <span class="sep">|</span>
+                    <?php
+                        }
                     }
                     ?>
 
                 </p>
                 <?php
-                $postsPerPage = 2;
+
                 $project_args = array(
                     'post_type' => 'projects',
-                    'posts_per_page' => $postsPerPage,
                     "order" => 'ASC',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'project-type',
+                            'terms' => $term_id
+                        )
+                    )
                 );
                 $projects = get_posts($project_args);
 
@@ -61,14 +75,11 @@ if (have_posts()) :
                 <?php } ?>
 
             </div>
-            <?php if ($projects->post_count <= 2) { ?>
-                <button id="more" class="commonButton white mainColorBg border-0 mx-auto aperturaRegular">
-                    More
-                </button><?php } ?>
+
         </section>
 
     <?php
-    endwhile;
+
 endif;
 
 ?>

@@ -31,7 +31,7 @@ if (have_posts()) :
                        allowfullscreen="true" title="Adobe Flash Player">
             </div>
         <?php }else{?>
-        <video <?=$muted;?> autoplay class="myVideo" id="myVideo">
+        <video <?=$muted;?> class="myVideo" id="myVideo">
             <source src="<?=$url; ?>" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>

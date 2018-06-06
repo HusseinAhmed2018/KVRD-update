@@ -3,28 +3,8 @@
 <?php // Show the selected project content.
 if (have_posts()) :
     while (have_posts()) : the_post();
-//        $terms = get_terms([
-//            'taxonomy' => 'project-type',
-//            'hide_empty' => false,
-//        ]);
-        $args = array('hide_empty' => true);
 
         $terms = get_terms('project-type');
-
-//        $count = count( $terms );
-//        $i = 0;
-//        foreach ( $terms as $term ) {
-//            $i++;
-//            $term_list = '<p class="my_term-archive">';
-//            $term_list .= '<a href="' . esc_url( get_term_link( $term ) ) . '" alt="' . esc_attr( sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) ) . '">' . $term->name . '</a>';
-//            if ( $count != $i ) {
-//                $term_list .= ' &middot; ';
-//            }
-//            else {
-//                $term_list .= '</p>';
-//            }
-//        }
-//        echo $term_list;
 
         ?>
         <section
@@ -41,11 +21,17 @@ if (have_posts()) :
             <div class="myContainer">
                 <p class="text-center text-md-right mrg-btm-xg">
                     <?php
+                    $numItems = count($terms);
+                    $i = 0;
                     foreach ($terms as $term) {
-                    ?>
+                        ?>
                         <a href="<?= esc_url(get_term_link($term));?>" class="aperturaMedium"><?=$term->name;?></a>
-                        <span class="sep">|</span>
-                    <?php
+                        <?php
+                        if(++$i != $numItems) {
+                            ?>
+                            <span class="sep">|</span>
+                            <?php
+                        }
                     }
                     ?>
 
