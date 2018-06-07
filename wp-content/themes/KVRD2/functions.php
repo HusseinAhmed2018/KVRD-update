@@ -193,3 +193,127 @@ function more_post_ajax(){
 
 add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
+
+#----------------------------------Ajax project-email ---------------------------------
+add_action("wp_ajax_message", "message_function");
+add_action("wp_ajax_nopriv_message", "message_function");
+
+function message_function() {
+
+
+    global $wpdb;
+
+    $name       = $_POST[ 'name' ];
+    $email      = $_POST[ 'email' ];
+    $number     = $_POST[ 'number' ];
+
+    $arr = [];
+    $index = 0;
+
+    $headers = array('Content-Type: text/html; charset=UTF-8');
+
+    $required = array($email , $number, $name);
+    foreach ($required as $field) {
+        if ($field == '') {
+            $errors[] = 'All Fields are required.';
+            break;
+        }
+    }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Invalid email format!';
+
+    }
+
+    if(!empty($errors)){
+
+        foreach ($errors as $key => $all) {
+            $arr[$index]['error'] = $all;
+            $index ++ ;
+        }
+
+    }else{
+        $to = 'info@kvrd.com.eg';
+        $subject = 'KVRD';
+        $full_message = "
+                        Email   : $email<br/>
+                        name    : $name <br/>
+ 						Subject : $subject<br/>
+ 						Number  : $number
+		";
+
+        $send_email = wp_mail( $to, $subject, $full_message, $headers);
+
+        $arr[$index]['success'] = 'Thank You';
+        $arr[$index]['error']   =   '';
+    }
+
+
+    header('Content-Type: application/json');
+    $text = json_encode($email);
+    die(json_encode($arr)) ;
+
+}
+
+#----------------------------------AJax Careers-------------------------------
+
+add_action("wp_ajax_careers", "careers_function");
+add_action("wp_ajax_nopriv_careers", "careers_function");
+
+function careers_function() {
+
+
+    require_once(ABSPATH. "/vendor/anthonybudd/wp_mail/src/WP_Mail.php");
+
+
+    $data = $_POST['datastring'];
+
+    for ($i=0; $i<= sizeof($data); $i++ ){
+
+        $field[$data[$i]['name']] = $data[$i]['value'];
+    }
+
+    $index = 0;
+    $name = $field['name'];
+    $email = $field['carrer_email'];
+    $phone = $field['phone'];
+    $military = $field['military'];
+
+//    for($i =17; $i<= sizeof($data); $i++){
+//        $exp[$data[$i]['name']] = $data[$i]['value'];
+//    }
+
+    $required = array($email , $name, $phone, $military);
+    foreach ($required as $field) {
+        if ($field == '') {
+            $errors[] = 'All Fields are required.';
+            break;
+        }
+    }
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Invalid email format!';
+    }
+
+    if(!empty($errors)) {
+
+        foreach ($errors as $key => $all) {
+            $arr[$index]['error'] = $all;
+            $index ++ ;
+        }
+    }else{
+        $send_email = WP_Mail::init()
+            ->to('hr@kvrd.com.eg')
+            ->subject('KVRD careers!')
+            ->template(get_template_directory() .'/emails/template.php', [
+                'data' => $data
+            ])
+            ->send();
+
+        $arr[$index]['success'] = 'Thank You';
+        $arr[$index]['error']   =   '';
+    }
+
+    header('Content-Type: application/json');
+    die(json_encode( $arr)) ;
+
+}

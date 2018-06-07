@@ -63,6 +63,10 @@ for ($i=0; $i<= sizeof($data); $i++ ){
 
     $field[$data[$i]['name']] = $data[$i]['value'];
 }
+
+for($i =17; $i<= sizeof($data); $i++){
+    $exp[$data[$i]['name']] = $data[$i]['value'];
+}
 ?>
 <section class="carrer2">
     <div class="myContainer">

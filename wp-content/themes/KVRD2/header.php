@@ -76,6 +76,6 @@
 <div class="alert alert-success text-center" style="display: none; position: fixed;z-index: 100000;">
     <strong>Success!</strong> This alert box could indicate a successful or positive action.
 </div>
-<div id="alert_danger" class="wrongEmail alert-danger text-center" style="display: none; position: fixed;z-index: 100000; min-width: 29%">
+<div id="alert_danger" class="wrongEmail text-center" style="display: none; position: fixed;z-index: 100000; min-width: 29%">
 
 </div>

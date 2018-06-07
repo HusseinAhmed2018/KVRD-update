@@ -3,7 +3,8 @@
         <div class="myContainer d-lg-flex align-items-center justify-content-between">
             <div class="footerElem clearfix">
                 <a href="">
-                    <img src="<?= get_template_directory_uri().'/asset/images/logo.png';?>" alt="" class="float-left logo">
+                    <img src="<?= get_template_directory_uri() . '/asset/images/logo.png'; ?>" alt=""
+                         class="float-left logo">
                 </a>
             </div>
             <div class="footerElem ">
@@ -54,44 +55,60 @@
     </div>
 </footer>
 <script type="text/javascript">
-    $(function() {
+    $(function () {
 
         $('#idForm').click(function (e) {
             e.preventDefault();
-            var email = $( "#news_email" ).val();
+            var email = $("#news_email").val();
 
-            $.ajax({
-                type: 'POST',
-                dataType: "json",
-                url: ajaxurl,
-                cache: false,
-                data: {"action": "news_letter", email: email },
-                success: function(data) {
+            if (email == '') {
+                $('#alert_danger').empty();
 
-                    // console.log(data[0].error);
-                    error   = data[0].error;
-                    success = data[0].success;
-                    console.log(data[0].error);
+                $('#alert_danger').append('<div id="danger" class="alert alert-danger text-center"></div>');
+                $("#danger").append('<strong>Error!</strong> ' + 'enter your E-mail');
 
-                    if(data[0].error != ''){
-                        $( ".wrongEmail" ).html( '<i class="fas fa-times"></i> ' + error );
-                        // $('.wrongEmail').css('display', 'block');
+                $("#alert_danger").fadeTo(9000, 9000).slideUp(9000, function () {
+                    $("#alert_danger").slideUp(9000);
+                });
+            }
+            else {
+                $.ajax({
+                    type: 'POST',
+                    dataType: "json",
+                    url: ajaxurl,
+                    cache: false,
+                    data: {"action": "news_letter", email: email},
+                    success: function (data) {
 
-                        $(".wrongEmail").fadeTo(20000, 50000).slideUp(50000, function(){
-                            $(".wrongEmail").slideUp(50000);
-                        });
-                    }else{
-                        // console.log(data[0].success);
-                        $('.wrongEmail').css('display', 'none');
-                        $(".alert-success").fadeTo(20000, 50000).slideUp(50000, function(){
-                            $(".alert-success").slideUp(50000);
-                        });
-                        $( ".alert" ).html( '<strong>Success!</strong> ' + success );
+                        // console.log(data[0].error);
+                        error = data[0].error;
+                        success = data[0].success;
+                        console.log(data[0].error);
+
+                        if (data[0].error != '') {
+
+                            $('#alert_danger').empty();
+
+                            $('#alert_danger').append('<div id="danger" class="alert alert-danger text-center"></div>');
+                            $("#danger").append('<strong>Error!</strong> ' + error);
+
+                            $("#alert_danger").fadeTo(9000, 9000).slideUp(9000, function () {
+                                $("#alert_danger").slideUp(9000);
+                            });
+                        } else {
+                            // console.log(data[0].success);
+                            $('.wrongEmail').css('display', 'none');
+                            $(".alert-success").fadeTo(20000, 50000).slideUp(50000, function () {
+                                $(".alert-success").slideUp(50000);
+                            });
+                            $(".alert").html('<strong>Success!</strong> ' + success);
+
+                        }
 
                     }
+                });
+            }
 
-                }
-            });
         });
 
 

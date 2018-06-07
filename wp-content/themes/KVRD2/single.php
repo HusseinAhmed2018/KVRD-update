@@ -160,16 +160,16 @@ if (have_posts()):
         <section class="details">
             <div class="myContainer">
                 <p class="aperturaRegular f-lg mainColor">More Details</p>
-                <form action="">
+                <form id="message_Form" action="">
                     <div class="row justify-content-center">
                         <div class="form-group">
-                            <input type="text" placeholder="Name" class="form-control">
+                            <input id="name" type="text" placeholder="Name" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email" class="form-control">
+                            <input id="email" type="email" placeholder="Email" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Phone Number" class="form-control">
+                            <input id="number" type="text" placeholder="Phone Number" class="form-control">
                         </div>
                         <button class="mainColorBg white">
                             submit
@@ -234,7 +234,111 @@ endif;
                };
        })();
     </script>
+    <script type="text/javascript">
+        $(function() {
 
+            $('#message_Form').click(function (e) {
+                e.preventDefault();
+                var name        = $( "#name" ).val();
+                var email       = $( "#email" ).val();
+                var number      = $( "#number" ).val();
+
+                var errors = [];
+
+                if(email == ''){
+                    errors.push("email its required");
+                }else {
+                    var atpos = email.indexOf("@");
+                    var dotpos = email.lastIndexOf(".");
+                    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+                        errors.push('Not a valid e-mail address!');
+                    }
+                }
+
+                if(number == ''){
+                    errors.push('number its required!');
+                }else{
+                    if(isNaN(number) == true){
+                        errors.push('invalid number only contain number!');
+                    }else{
+                        if(number.length < 8 || number.length >15){
+                            errors.push('valid number must be between 8 and 15 numbers !');
+                        }
+                    }
+                }
+
+                if(name == ''){
+                    errors.push("please type your name");
+                }
+
+                if(errors != ''){
+                    $('#alert_danger').empty();
+
+                    for (i = 0; i < errors.length; i++) {
+
+                        $('#alert_danger').append('<div id="danger' + i + '" class="alert alert-danger text-center"></div>');
+                        $("#danger" + i).append('<strong>Error!</strong> ' + errors[i]);
+
+                    }
+
+                    $("#alert_danger").fadeTo(9000, 9000).slideUp(9000, function () {
+                        $("#alert_danger").slideUp(9000);
+                    });
+                }
+
+                if(errors == '') {
+                    $.ajax({
+                        type: 'POST',
+                        dataType: "json",
+                        url: ajaxurl,
+                        cache: false,
+                        data: {
+                            "action": "message",
+                            email: email,
+                            name: name,
+                            number: number,
+                        },
+                        success: function (data) {
+                            console.log(data);
+                            error = data[0].error;
+                            success = data[0].success;
+
+                            if (data[0].error != '') {
+                                $('#alert_danger').empty();
+
+                                for (i = 0; i < data.length; i++) {
+                                    // console.log(data[i].error);
+
+                                    $('#alert_danger').append('<div id="danger' + i + '" class="alert alert-danger text-center"></div>');
+                                    $("#danger" + i).append('<strong>Error!</strong> ' + data[i].error);
+
+                                }
+
+                                $("#alert_danger").fadeTo(9000, 9000).slideUp(9000, function () {
+                                    $("#alert_danger").slideUp(9000);
+                                });
+
+                            } else {
+
+                                $(".alert-success").fadeTo(9000, 9000).slideUp(9000, function () {
+                                    $(".alert-success").slideUp(9000);
+                                });
+                                $(".alert").html('<strong>Success!</strong> ' + success);
+
+                                $( "#first_name" ).val('');
+                                $( "#last_name" ).val('');
+                                $( "#email" ).val('');
+                                $( "#number" ).val('');
+                                $( "#message" ).val('');
+                            }
+                        }
+                    });
+                }
+            });
+
+
+        });
+    </script>
 
 
 <?php get_footer(); ?>
