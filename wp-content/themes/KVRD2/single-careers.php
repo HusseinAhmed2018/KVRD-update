@@ -4,7 +4,7 @@ if (have_posts()):
     $allow = get_post_meta($id, 'allow');
 ?>
 
-    <section style="background-image: url('<?= get_template_directory_uri().'/asset/images/carrers.png';?>'); background-size: cover" class="firstSection">
+    <section style="background-image: url('<?= get_template_directory_uri().'/asset/images/carrers.png';?>'); background-size: cover" class="firstSection forFixed <?=(($allow[0] == 1)? '': 'ourProject');?>">
         <div class="myContainer position-relative">
             <div class="mainColorBg position-absolute commonDiv">
                 <h1 class="white letter-4"><?=(($allow[0] == 1)? 'Apply Now': 'CAREERS');?></h1>
@@ -22,6 +22,7 @@ if (have_posts()):
             </div>
         </div>
     </section>
+
     <?php if($allow[0] == 1):?>
     <section class="p-ver-40 pb-0">
         <div class="myContainer">

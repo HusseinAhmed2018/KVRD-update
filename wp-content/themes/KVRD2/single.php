@@ -28,7 +28,7 @@ if (have_posts()):
 
         ?>
 
-        <section style="background-image: url('<?= $project_image;?>'); background-size: cover" class="firstSection">
+        <section style="background-image: url('<?= $project_image;?>'); background-size: cover; background-position: top;" class="firstSection forFixed">
             <div class="myContainer position-relative">
                 <div class="mainColorBg position-absolute commonDiv">
                     <h1 class="white letter-4"><?php the_title();?></h1>
@@ -41,7 +41,7 @@ if (have_posts()):
         <section class="projectPage p-ver-40">
             <div class="myContainer">
                 <div class="clearfix d-flex flex-column d-md-block">
-                    <p class="f-lg mainColor aperturaRegular rightBorder"><?=$title[0];?> </p>
+                    <p class="mainColor aperturaRegular rightBorder"><?=$title[0];?> </p>
                     <div class="smallHr mainColorBg"></div>
                     <p class="mainColor aperturaRegular target order-3"><?=$text[0]?></p>
                     <div class="projectImage centerImg-md">
@@ -172,7 +172,7 @@ if (have_posts()):
                             <input id="number" type="text" placeholder="Phone Number" class="form-control">
                         </div>
                         <button class="mainColorBg white">
-                            submit
+                            Brochure
                         </button>
                     </div>
                 </form>

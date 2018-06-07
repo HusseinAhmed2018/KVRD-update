@@ -37,7 +37,7 @@ add_image_size('small',250, 100, true);
 
 function my_acf_google_map_api( $api ){
 
-    $api['key'] = 'AIzaSyCqQm3csno1ZhyxE0Ya7U6IKAe3Dot_EiM';
+    $api['key'] = 'AIzaSyChnW9yL0blmoJM1zQ98N9P5UXlStjtDDg';
 
     return $api;
 

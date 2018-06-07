@@ -9,7 +9,7 @@ if (have_posts()) :
         ?>
         <section
                 style="background-image: url('<?= get_template_directory_uri() . '/asset/images/carrers.png'; ?>'); background-size: cover"
-                class="firstSection ourProject">
+                class="firstSection ourProject forFixed">
             <div class="myContainer position-relative">
                 <div class="mainColorBg position-absolute commonDiv">
                     <h1 class="white letter-4">Our
@@ -25,9 +25,9 @@ if (have_posts()) :
                     $i = 0;
                     foreach ($terms as $term) {
                         ?>
-                        <a href="<?= esc_url(get_term_link($term));?>" class="aperturaMedium"><?=$term->name;?></a>
+                        <a href="<?= esc_url(get_term_link($term)); ?>" class="aperturaMedium"><?= $term->name; ?></a>
                         <?php
-                        if(++$i != $numItems) {
+                        if (++$i != $numItems) {
                             ?>
                             <span class="sep">|</span>
                             <?php
@@ -60,8 +60,10 @@ if (have_posts()) :
                                 <p class="aperturaRegular text-uppercase desc">
                                     <?= $excerpt[0] ?>
                                 </p>
-                                <a href="<?= get_post_permalink($project->ID) ?>"
-                                   class="aperturaRegular d-inline-block">MORE</a>
+                                <div class="text-center">
+                                    <a href="<?= get_post_permalink($project->ID) ?>"
+                                       class="aperturaRegular d-inline-block">MORE</a>
+                                </div>
                             </div>
 
                         </div>

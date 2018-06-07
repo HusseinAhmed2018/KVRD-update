@@ -24,15 +24,19 @@ img {
     border: none;
   }
 }
-
+.aroundSocial{
+  margin-top: 29.5px;
+}
 .socialIcons {
   direction: rtl;
   a {
     color: rgba(0, 0, 0, 0.2);
-    font-size: 20px;
-    margin-right: 12px;
+    font-size: 16px;
     &:hover, &.active {
       color: $mainColor;
+    }
+    &:not(:first-child){
+      margin-right: 12px;
     }
   }
 }
@@ -83,14 +87,15 @@ img {
         display: block;
         font-size: 24px;
         color: #707070;
+        &:hover{
+          color: $mainColor;
+        }
       }
+
     }
   }
   .searchForm {
     display: none;
-  }
-  .chat {
-    width: 145px;
   }
 }
 
@@ -109,7 +114,6 @@ header {
   width: 100%;
   z-index: 99999;
   .bottom {
-    //line-height: 63px;
     ul {
       width: calc(100% - 250px);
     }
@@ -130,6 +134,15 @@ header {
     }
   }
   .socialIcons {
+    border-right: 1px solid $mainColor;
+    line-height: 1;
+  }
+  .top{
+    input{
+      width: 185px;
+    }
+  }
+  .socialIcons {
     display: inline-block;
   }
   .searchForm {
@@ -142,8 +155,8 @@ header {
 
 .chat {
   position: absolute;
-  width: 177px;
-  height: 70px;
+  width: 146px;
+  height: 63px;
   top: 0;
   right: 0;
   z-index: 999;
@@ -343,6 +356,9 @@ footer {
       top: 8px;
       right: -5px;
     }
+    .smallHr{
+      width: 38px;
+    }
   }
   .bottom {
     line-height: 66px;
@@ -369,8 +385,8 @@ footer {
     font-size: 30px;
   }
   .smallHr {
-    margin: 8px 0 15px;
-    width: 52px;
+    margin: 2px 0 15px;
+    width: 40px;
   }
 }
 
@@ -389,7 +405,9 @@ footer {
 .p-ver-40 {
   padding: 40px 0;
 }
-
+.forFixed{
+  margin-top: 145px
+}
 .singleCarer {
   padding: 50px 40px;
   border: 1px solid #D9D9D9;
@@ -583,11 +601,13 @@ footer {
 .projectPage {
   .rightBorder {
     line-height: 1.2;
-    max-width: 330px;
-    padding-right: 30px;
+    font-size: 26px;
   }
   .target {
     margin-top: 20px;
+  }
+  .smallHr{
+    width: 77px;
   }
 }
 
@@ -604,13 +624,14 @@ footer {
     height: 100%;
   }
   .overMap {
-    padding: 60px 30px;
+    padding: 60px 45px;
     position: absolute;
-    left: 0;
+    left: 12.5%;
     top: -130px;
+    width: 75%;
     p {
       color: #fff;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
     }
   }
 }
@@ -665,16 +686,16 @@ footer {
 }
 
 .galleryData {
-  margin: 34px;
+  margin: 34px 0;
   p {
     margin-bottom: 40px;
   }
   a {
-    margin-bottom: 25px;
+    margin: 0 0 25px 13px;
     font-size: 18px;
     color: #A3A3A3;
     i {
-      margin-right: 5px;
+      margin: 0 5px 0 -13px;
     }
   }
 }
@@ -698,15 +719,19 @@ footer {
     width: 100%;
   }
 }
+
 .swiper-button-next, .swiper-button-prev{
   &:focus{
     outline: none;
   }
 }
+.f-big2{
+  font-size: 20px;
+}
+.vacancies{
+  font-size: 24px;
+}
 @media screen and (min-width: 481px) {
-  .head {
-    font-size: 30px;
-  }
   .map {
     .overMap {
       padding: 60px 70px;
@@ -724,6 +749,11 @@ footer {
       }
     }
   }
+  .allProjects{
+    .commonButton{
+      width: 75%;
+    }
+  }
   .uniqueWrapper {
     display: flex;
     flex-direction: column;
@@ -734,9 +764,22 @@ footer {
   .moreCarers {
     width: 100% !important;
   }
+  .allWords{
+    .smallHr{
+      width: 58px;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .socialIcons {
+    a {
+      font-size: 20px;
+    }
+  }
+  .f-big2{
+    font-size: 22px;
+  }
   .applicationForm {
     .personalInfo {
       padding: 80px 0 140px;
@@ -767,7 +810,9 @@ footer {
   }
   .singlechar {
     font-size: 185px;
-    line-height: 0.65
+    line-height: 0.65;
+    margin-bottom: -2px;
+    margin-left: -16px!important;
   }
   .head {
     font-size: 48px;
@@ -843,7 +888,7 @@ footer {
   }
   .commonDiv {
     padding: 70px;
-    max-width: 440px;
+    max-width: 448px;
     h1 {
       font-size: 59px;
     }
@@ -903,6 +948,14 @@ footer {
       }
     }
   }
+  .projectPage{
+    .rightBorder{
+      font-size: 48px;
+    }
+    .smallHr{
+      width: 138px;
+    }
+  }
   .gallery {
     .grayBg{
       height: 500px;
@@ -930,6 +983,13 @@ footer {
       max-width: 186px;
     }
   }
+  .applicationText{
+    width: 75%;
+    height: 45px;
+  }
+  .vacancies{
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -938,7 +998,7 @@ footer {
   }
   .gallery {
     .swiper-button-next, .swiper-button-prev, .sep {
-      top: 100% !important;
+      top: 88% !important;
     }
   }
   .details {
@@ -957,6 +1017,10 @@ footer {
     .searchIcon {
       display: none;
     }
+  }
+  .chat{
+    height: 70px;
+    width: 177px;
   }
   .navIcon {
     display: none;
@@ -982,12 +1046,18 @@ footer {
     h1 {
       font-size: 69px;
     }
+    .smallHr {
+      margin: 2px 0 15px;
+      width: 45px;
+    }
   }
   .projectPage {
     .smallHr {
       display: none;
     }
     .rightBorder {
+      max-width: 330px;
+      padding-right: 30px;
       float: left;
       border-right: 2px solid $mainColor;
     }
@@ -1008,22 +1078,27 @@ footer {
       max-width: 500px;
     }
   }
+  .applicationText{
+    width: 62%;
+  }
+  header{
+    .socialIcons{
+      border: transparent;
+    }
+  }
 }
 
 @media screen and (min-width: 1440px) {
-  header {
-    .bottom {
-      li {
-        &:not(:last-child) {
-          margin-right: 55px;
-        }
-      }
-    }
-  }
   .home-first-slider {
     .absoluteDiv {
       width: 40%;
     }
+  }
+  .f-big2{
+    font-size: 30px;
+  }
+  .vacancies{
+    font-size: 48px;
   }
   //.home-1 {
   //  //height: 100%;
@@ -1032,4 +1107,15 @@ footer {
   //    left: 0;
   //  }
   //}
+}
+@media screen and (min-width: 1540px) {
+  header {
+    .bottom {
+      li {
+        &:not(:last-child) {
+          margin-right: 68px;
+        }
+      }
+    }
+  }
 }

@@ -106,10 +106,16 @@ $(window).ready(function () {
     });
 
 
+    var screenSize = window.innerWidth;
+    if (screenSize < 768) {
+        $('.gallery .common').css('display', 'none');
+    }
 
     function activateSlider(clickedIndex) {
         $('.gallery .gallerySlider[data-index=' + clickedIndex + "]").addClass('slider-opened');
-        $('.gallery .common[data-index=' + clickedIndex + "]").css('display', 'block');
+        if (screenSize >= 768) {
+            $('.gallery .common[data-index=' + clickedIndex + "]").css('display', 'block');
+        }
     }
 
     $('.galleryData a').click(function (e) {

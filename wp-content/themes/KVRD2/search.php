@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <section class="position-relative" id="firstSection"
+    <section class="position-relative forFixed" id="firstSection"
              style="background-image: url('<?= get_template_directory_uri() . '/asset/images/our-story.jpg'; ?>'); background-size: cover">
 
         <!--<img class="header-img" src="images/our-story.jpg">-->

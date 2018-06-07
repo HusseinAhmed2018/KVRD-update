@@ -8,12 +8,20 @@
                 </a>
             </div>
             <div class="footerElem ">
+                <!--                <p class="f-18 font-weight-bold white">OUR LOCATION</p>-->
+                <!--                <div class="smallHr mt-3 mb-2"></div>-->
+                <!--                <p class="f-12 white">KVRD. California-->
+                <!--                    34 Tesla, Ste 100-->
+                <!--                    Irvine, Ca, USA 9261</p>-->
+            </div>
+            <div class="footerElem ">
                 <p class="f-18 font-weight-bold white">OUR LOCATION</p>
                 <div class="smallHr mt-3 mb-2"></div>
                 <p class="f-12 white">KVRD. California
                     34 Tesla, Ste 100
                     Irvine, Ca, USA 9261</p>
             </div>
+
             <div class="footerElem ">
                 <p class="f-18 font-weight-bold white">Email Us</p>
                 <div class="smallHr mt-3 mb-2"></div>
@@ -34,20 +42,28 @@
             </div>
         </div>
     </div>
+    <?php
+
+    $facebook = get_post_meta(21,'facebook',true);
+    $instagram = get_post_meta(21,'instagram',true);
+    $twitter = get_post_meta(21,'twitter',true);
+    $Linkedin = get_post_meta(21,'linkedin',true);
+
+    ?>
     <div class="bottom mainColorBg">
         <div class="myContainer clearfix">
             <span class="float-md-left d-block white f-12">© 2018 Envoy. All Rights Reserved.</span>
             <div class="socialIcons float-md-right d-inline-block">
-                <a href="#" class="">
+                <a href="<?=$Linkedin;?>" class="">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="#" class="">
+                <a href="<?=$instagram;?>" class="">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="#" class="active">
+                <a href="<?=$twitter;?>" >
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="#" class="">
+                <a href="<?=$facebook;?>" class="">
                     <i class="fab fa-facebook-square"></i>
                 </a>
             </div>

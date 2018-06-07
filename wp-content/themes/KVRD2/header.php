@@ -24,13 +24,14 @@
     ?>
     <div class="top">
         <div class="myContainer clearfix">
-            <a href="">
+            <a href="<?=home_url();?>">
                 <img src="<?= get_template_directory_uri().'/asset/images/logo.png';?>" alt="" class="float-left logo">
             </a>
 
             <?php get_search_form(); ?>
         </div>
     </div>
+
     <hr>
     <div class="bottom">
         <div class="myContainer clearfix position-relative">
@@ -59,18 +60,20 @@
 
 </header>
 <div class="responsiveMenu whiteBg position-fixed">
-    <div class="px-4">
-        <?php
-        $args = array(
-            'menu'  => 'side Menu',
-            'container' => 'ul',
-            'items_wrap' => '<ul >%3$s</ul>',
+    <div class="myContainer">
+        <div class="px-4">
+            <?php
+            $args = array(
+                'menu'  => 'side Menu',
+                'container' => 'ul',
+                'items_wrap' => '<ul >%3$s</ul>',
 
-        );
-        wp_nav_menu( $args );
+            );
+            wp_nav_menu( $args );
 
-        ?>
+            ?>
 
+        </div>
     </div>
 </div>
 <div class="alert alert-success text-center" style="display: none; position: fixed;z-index: 100000;">

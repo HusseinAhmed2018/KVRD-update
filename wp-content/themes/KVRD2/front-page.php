@@ -21,7 +21,7 @@ if (have_posts()) :
 
 ?>
     <!--start video section-->
-    <section class="home-1 position-relative">
+    <section class="home-1 position-relative forFixed">
         <?php
         if($link != ''){
             ?>
@@ -107,8 +107,8 @@ if (have_posts()) :
                     <p class="text-uppercase f-lg mainColor"><?=$title = get_post_meta($post->ID, 'title', true);?></p>
                     <div class="smallHr mainColorBg d-none d-md-block"></div>
                     <div class="toChangePos">
-                        <p class="f-md mainColor twoLines"><?= get_post_meta($post->ID, 'text', true); ?></p>
-                        <button class="mainColor f-18 border-0 letter-4 p-3 whiteBg">
+                        <p class="f-md mainColor twoLines letter-4"><?= get_post_meta($post->ID, 'text', true); ?></p>
+                        <button class="mainColor f-18 border-0 letter-4 p-3 whiteBg d-none d-md-block">
                             READ MORE
                         </button>
                     </div>

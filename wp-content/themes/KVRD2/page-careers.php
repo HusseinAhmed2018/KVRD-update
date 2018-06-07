@@ -4,7 +4,7 @@
 if (have_posts()) :
 ?>
 
-    <section style="background-image: url('<?= get_template_directory_uri().'/asset/images/carrers.png';?>'); background-size: cover" class="firstSection">
+    <section style="background-image: url('<?= get_template_directory_uri().'/asset/images/carrers.png';?>'); background-size: cover" class="firstSection forFixed">
         <div class="myContainer position-relative">
             <div class="mainColorBg position-absolute commonDiv">
                 <h1 class="white letter-4 text-uppercase">CAREERS</h1>
@@ -36,7 +36,7 @@ if (have_posts()) :
                 ?>
                 <div class="col-md-6 col-xl-4">
                     <div class="singleCarer">
-                        <p class="f-big aperturaRegular letter-4"><?= $career->post_title;?></p>
+                        <p class="f-big2 aperturaRegular letter-4"><?= $career->post_title;?></p>
                         <p class="aperturaRegular twoLines letter-4 explain f-normal"><?=$excerpt[0];?>.</p>
                         <a href="<?= get_post_permalink($career->ID);?>">
                         <button class="aperturaRegular border-0 commonButton">

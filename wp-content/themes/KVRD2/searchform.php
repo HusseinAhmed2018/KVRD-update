@@ -1,6 +1,6 @@
-<div class="float-right mt-3">
+<div class="float-right aroundSocial">
 
-    <div class="socialIcons mr-4 toHide">
+    <div class="socialIcons pr-3 toHide">
         <a href="<?=$Linkedin?>" class="">
             <i class="fab fa-linkedin"></i>
         </a>
@@ -20,7 +20,7 @@
             <i class="fas fa-search mainColor"></i>
         </button>
     </form>
-    <a href="javascript:void(0)" class="mainColor mainHover searchIcon toHide">
+    <a href="javascript:void(0)" class="mainColor mainHover searchIcon toHide pl-3">
         <i class="fas fa-search"></i>
     </a>
 </div>
